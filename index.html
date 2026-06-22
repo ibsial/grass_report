@@ -1,616 +1,227 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<title>GRASS (Grass Network) Deep Research Report</title>
+<!DOCTYPE html><html><head><meta charset='utf-8'>
+<title>GRASS Research Report V3.2</title>
 <style>
-body{
-    font-family: Arial, sans-serif;
-    max-width:1200px;
-    margin:auto;
-    padding:40px;
-    line-height:1.6;
-    color:#222;
-}
-h1,h2,h3{
-    color:#0f5132;
-}
-table{
-    border-collapse:collapse;
-    width:100%;
-    margin:20px 0;
-}
-th,td{
-    border:1px solid #ddd;
-    padding:10px;
-}
-th{
-    background:#f2f2f2;
-}
-.warning{
-    background:#fff3cd;
-    padding:15px;
-    border-left:5px solid #ffc107;
-}
-.good{
-    background:#d1e7dd;
-    padding:15px;
-    border-left:5px solid #198754;
-}
-.bad{
-    background:#f8d7da;
-    padding:15px;
-    border-left:5px solid #dc3545;
-}
-pre{
-    white-space:pre-wrap;
-}
-</style>
-</head>
-<body>
+body{font-family:Inter,Arial,sans-serif;background:#f6f8fb;color:#171717;max-width:1100px;margin:auto;padding:24px;line-height:1.7}
+.card{background:#fff;border:1px solid #e7e7e7;border-radius:16px;padding:24px;margin:18px 0}
+.metrics{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px}
+.metric{background:#fafafa;border:1px solid #ececec;border-radius:12px;padding:14px}
+.num{font-size:28px;font-weight:700}
+.green{color:#15803d}.amber{color:#b45309}.red{color:#dc2626}
+table{width:100%;border-collapse:collapse} th,td{padding:10px;border-bottom:1px solid #ececec;text-align:left}
+.take{padding:12px;border-left:4px solid #111;background:#fafafa;border-radius:8px}
+.good{border-color:#15803d}.warn{border-color:#b45309}.bad{border-color:#dc2626}
+pre{background:#fafafa;border:1px solid #ececec;padding:14px;border-radius:10px}
+h1,h2,h3{margin-top:0}
+</style></head><body>
 
-<h1>Grass Network ($GRASS) Deep Due Diligence Report</h1>
+<div class='card'>
+<h1>GRASS Research Report V3.2</h1>
+<p>AI Data Infrastructure • Solana • DePIN • June 2026</p>
+<div class='metrics'>
+<div class='metric'><div>Revenue Run Rate</div><div class='num green'>$51.2M</div></div>
+<div class='metric'><div>Users</div><div class='num green'>8.5M+</div></div>
+<div class='metric'><div>Supply</div><div class='num'>1B</div></div>
+<div class='metric'><div>Unlocked</div><div class='num amber'>54-61%</div></div>
+<div class='metric'><div>Next Unlock</div><div class='num red'>33.43M</div></div>
+<div class='metric'><div>Holders</div><div class='num'>337k+</div></div>
+</div>
+</div>
 
-<p>
-Date: June 2026<br>
-Ticker: GRASS<br>
-Sector: DePIN / AI Data Infrastructure / Bandwidth Marketplace<br>
-Chain: Solana
-</p>
-
+<div class='card'>
 <h2>Executive Summary</h2>
-
-<p>
-Grass is one of the few crypto projects with evidence of real commercial activity.
-Unlike most DePIN projects that primarily sell a token narrative, Grass sells access
-to large-scale public web datasets collected through a distributed network of residential
-internet connections.
-</p>
-
-<p>
-Its investment case depends on a single question:
-<strong>Can Grass become a major supplier of AI training data?</strong>
-</p>
-
-<p>
-If yes, GRASS may become one of the strongest revenue-backed crypto assets in the AI sector.
-If not, it risks becoming another incentive-driven network whose token value depends primarily on speculation.
-</p>
-
-<hr>
-
-<h2>1. What Does Grass Actually Do?</h2>
-
-<p>
-Grass allows users to share unused internet bandwidth.
-The network routes requests through residential IPs and gathers publicly available web data.
-That data is processed and sold primarily to AI companies.
-</p>
-
-<p>
-Grass is effectively building a decentralized data acquisition layer for AI.
-</p>
-
-<p>
-Business flow:
-</p>
-
-<ol>
-<li>Users run Grass node/browser extension/app.</li>
-<li>Users contribute bandwidth.</li>
-<li>Grass gathers public web data.</li>
-<li>Data is structured and packaged.</li>
-<li>AI companies purchase datasets.</li>
-<li>Revenue funds operations and ecosystem growth.</li>
-</ol>
-
-<h2>2. Revenue</h2>
-
-<p>
-One of the strongest bullish points is that Grass has publicly disclosed business revenue.
-</p>
-
-<table>
-<tr>
-<th>Period</th>
-<th>Reported Revenue</th>
-</tr>
-<tr>
-<td>Q3 2025</td>
-<td>~$4.3M</td>
-</tr>
-<tr>
-<td>Q4 2025 (Projected)</td>
-<td>~$12.8M</td>
-</tr>
-</table>
-
-<p>
-Source: Grass Token Holder Call.
-</p>
-
-<p>
-Annualized, a $12.8M quarter implies a revenue run-rate of roughly:
-</p>
-
-<h3>$51.2M Annual Revenue Run Rate</h3>
-
-<p>
-This places Grass among a very small group of crypto projects with disclosed commercial income.
-</p>
-
-<p>
-The team also stated:
-</p>
-
-<ul>
-<li>~90% of revenue comes from multimodal datasets.</li>
-<li>~98% of revenue is connected to AI training demand.</li>
-</ul>
-
-<p>
-This means Grass is highly leveraged to AI spending cycles.
-</p>
-
-<hr>
-
-<h2>3. How Grass Makes Money</h2>
-
-<table>
-<tr>
-<th>Revenue Source</th>
-<th>Status</th>
-</tr>
-<tr>
-<td>AI training datasets</td>
-<td>Main source</td>
-</tr>
-<tr>
-<td>Multimodal data</td>
-<td>~90% of revenue</td>
-</tr>
-<tr>
-<td>Residential bandwidth network</td>
-<td>Core infrastructure</td>
-</tr>
-<tr>
-<td>Enterprise data sales</td>
-<td>Growing</td>
-</tr>
-</table>
-
-<p>
-Grass is not monetizing consumer activity.
-Its customers are primarily AI companies requiring large-scale training data.
-</p>
-
-<hr>
-
-<h2>4. Expenses</h2>
-
-<p>
-Grass does not publish audited financial statements.
-Therefore exact expenses cannot be verified.
-</p>
-
-<p>
-Likely major cost centers:
-</p>
-
-<ul>
-<li>Infrastructure</li>
-<li>Engineering</li>
-<li>Bandwidth rewards</li>
-<li>Legal/compliance</li>
-<li>Business development</li>
-<li>Data processing/storage</li>
-</ul>
-
-<p>
-Because no audited statements exist, any precise estimate would be speculation.
-</p>
-
-<hr>
-
-<h2>5. Tokenomics</h2>
-
-<h3>Total Supply</h3>
-
-<p>
-1,000,000,000 GRASS
-</p>
-
-<table>
-<tr>
-<th>Allocation</th>
-<th>Percent</th>
-</tr>
-<tr>
-<td>Community</td>
-<td>30%</td>
-</tr>
-<tr>
-<td>Investors</td>
-<td>25.2%</td>
-</tr>
-<tr>
-<td>Contributors</td>
-<td>22%</td>
-</tr>
-<tr>
-<td>Foundation & Ecosystem</td>
-<td>22.8%</td>
-</tr>
-</table>
-
-<h3>Community Breakdown</h3>
-
-<table>
-<tr>
-<th>Category</th>
-<th>Tokens</th>
-</tr>
-<tr>
-<td>Future Incentives</td>
-<td>170M</td>
-</tr>
-<tr>
-<td>Router Rewards</td>
-<td>30M</td>
-</tr>
-<tr>
-<td>Airdrop One</td>
-<td>100M</td>
-</tr>
-</table>
-
-<hr>
-
-<h2>6. Unlock Risk</h2>
-
-<p>
-There are conflicting unlock datasets across providers.
-Different platforms currently report different percentages unlocked.
-</p>
-
-<table>
-<tr>
-<th>Source</th>
-<th>Unlocked Estimate</th>
-</tr>
-<tr>
-<td>Tokenomist</td>
-<td>~61%</td>
-</tr>
-<tr>
-<td>Tokenomics.com</td>
-<td>~55%</td>
-</tr>
-<tr>
-<td>Dropstab</td>
-<td>~54%</td>
-</tr>
-</table>
-
-<p>
-Consensus:
-</p>
-
-<ul>
-<li>About 40–45% of supply still remains locked.</li>
-<li>Unlocks continue through multiple future periods.</li>
-<li>Investors and contributors still represent dilution risk.</li>
-</ul>
-
-<div class="warning">
-Strong caution: Future unlocks remain one of the largest bearish risks for GRASS.
+<p>Grass is one of the few crypto projects with publicly disclosed commercial revenue. The investment debate has shifted from “does the business work?” to “how much value accrues to token holders?”</p>
+<div class='take good'><b>Strength:</b> Real revenue, real customers, AI demand.</div><br>
+<div class='take bad'><b>Risk:</b> Future unlocks, concentration, weak direct value capture.</div>
 </div>
 
-<hr>
+<div class='card'>
+<h2>Business Model</h2>
+<pre>Users → Bandwidth → Public Web Data → Structured Datasets → AI Companies → Revenue</pre>
+<p>Grass collects public web data through residential bandwidth and sells processed datasets to AI companies.</p>
+</div>
 
-<h2>7. Buybacks</h2>
-
-<p>
-During the token holder call, Grass disclosed that revenue had been used to buy GRASS from the open market.
-</p>
-
+<div class='card'>
+<h2>Revenue Deep Dive</h2>
 <table>
-<tr>
-<th>Reported Activity</th>
-<th>Amount</th>
-</tr>
-<tr>
-<td>Completed buyback</td>
-<td>~$100k</td>
-</tr>
-<tr>
-<td>Additional buyback underway</td>
-<td>~$250k</td>
-</tr>
+<tr><th>Period</th><th>Revenue</th></tr>
+<tr><td>Q2 2025</td><td class='green'>$2.75M</td></tr>
+<tr><td>Q3 2025</td><td class='green'>$4.3M</td></tr>
+<tr><td>Q4 2025 (Projected)</td><td class='green'>$12.8M</td></tr>
 </table>
-
-<p>
-This is noteworthy because very few crypto projects use operating revenue for token purchases.
-</p>
-
-<hr>
-
-<h2>8. Holder Distribution</h2>
-
-<p>
-Current holder concentration remains high.
-</p>
-
-<table>
-<tr>
-<th>Metric</th>
-<th>Value</th>
-</tr>
-<tr>
-<td>Total holders</td>
-<td>~337,679</td>
-</tr>
-<tr>
-<td>Top 10 holders</td>
-<td>75.72%</td>
-</tr>
-<tr>
-<td>Top 20 holders</td>
-<td>84.70%</td>
-</tr>
-<tr>
-<td>Top 50 holders</td>
-<td>93.71%</td>
-</tr>
-</table>
-
-<p>
-Largest known addresses:
-</p>
-
-<table>
-<tr>
-<th>Rank</th>
-<th>Balance</th>
-<th>Supply %</th>
-</tr>
-<tr>
-<td>1</td>
-<td>459.1M</td>
-<td>45.9%</td>
-</tr>
-<tr>
-<td>2</td>
-<td>70M</td>
-<td>7%</td>
-</tr>
-<tr>
-<td>3</td>
-<td>70M</td>
-<td>7%</td>
-</tr>
-<tr>
-<td>4</td>
-<td>70M</td>
-<td>7%</td>
-</tr>
-</table>
-
-<p>
-Many of these wallets likely represent treasury, foundation or vesting contracts rather than individual whales.
-Identity labeling is not publicly verified.
-</p>
-
-<hr>
-
-<h2>9. Incentive Programs</h2>
-
-<table>
-<tr>
-<th>Program</th>
-<th>Status</th>
-</tr>
-<tr>
-<td>Season 1 Airdrop</td>
-<td>Completed</td>
-</tr>
-<tr>
-<td>Future Incentives</td>
-<td>170M GRASS allocated</td>
-</tr>
-<tr>
-<td>Router Rewards</td>
-<td>30M allocated</td>
-</tr>
-<tr>
-<td>Season 2</td>
-<td>Expected by community, not fully distributed</td>
-</tr>
-</table>
-
-<p>
-Community expectation remains heavily focused on Season 2 rewards and wallet rollout.
-</p>
-
-<hr>
-
-<h2>10. Mindshare Analysis</h2>
-
-<h3>Crypto Twitter</h3>
-
+<pre>
+Q2 2025  ████                 $2.75M
+Q3 2025  ███████              $4.3M
+Q4 2025  ██████████████████   $12.8M
+</pre>
 <ul>
-<li>Generally bullish.</li>
-<li>Strong focus on AI narrative.</li>
-<li>Revenue disclosures received positively.</li>
-<li>Upcoming community calls viewed as catalysts.</li>
+<li>~90% of revenue reportedly comes from multimodal datasets.</li>
+<li>~98% of revenue tied to AI demand.</li>
+<li>Annualized run rate implied by Q4 projection: <b class='green'>$51.2M</b>.</li>
 </ul>
+<div class='take good'>Revenue is the strongest component of the GRASS investment thesis.</div>
+</div>
 
-<h3>Reddit</h3>
-
-<p>
-More mixed.
-</p>
-
-<ul>
-<li>Positive users highlight real revenue.</li>
-<li>Negative users complain about reward delays.</li>
-<li>Ongoing frustration regarding wallet rollout.</li>
-<li>Questions around Season 2 timing appear frequently.</li>
-</ul>
-
-<p>
-Net sentiment:
-</p>
-
+<div class='card'>
+<h2>Buybacks & Value Capture</h2>
 <table>
-<tr>
-<th>Community</th>
-<th>Sentiment</th>
-</tr>
-<tr>
-<td>Crypto Twitter</td>
-<td>Bullish</td>
-</tr>
-<tr>
-<td>Reddit</td>
-<td>Mixed</td>
-</tr>
-<tr>
-<td>Airdrop Farmers</td>
-<td>Increasingly impatient</td>
-</tr>
-<tr>
-<td>Investors</td>
-<td>Generally constructive</td>
-</tr>
+<tr><th>Activity</th><th>Amount</th></tr>
+<tr><td>Completed Buyback</td><td>$100k</td></tr>
+<tr><td>Additional Buyback</td><td>$250k</td></tr>
+</table>
+<pre>
+Revenue discussed: ~$7.05M+
+Buybacks:          ~$0.35M
+</pre>
+<div class='take warn'>Revenue exists, but buybacks remain small relative to revenue. This is one of the largest concerns raised by investors.</div>
+</div>
+
+<div class='card'>
+<h2>Tokenomics</h2>
+<table>
+<tr><th>Allocation</th><th>%</th></tr>
+<tr><td>Community</td><td>30%</td></tr>
+<tr><td>Investors</td><td>25.2%</td></tr>
+<tr><td>Contributors</td><td>22%</td></tr>
+<tr><td>Foundation & Ecosystem</td><td>22.8%</td></tr>
+</table>
+<h3>Community Allocation</h3>
+<table>
+<tr><th>Category</th><th>Amount</th></tr>
+<tr><td>Future Incentives</td><td>170M</td></tr>
+<tr><td>Router Rewards</td><td>30M</td></tr>
+<tr><td>Airdrop One</td><td>100M</td></tr>
+</table>
+</div>
+
+<div class='card'>
+<h2>Unlock Analysis</h2>
+<p>Current estimates place unlocked supply between <b class='amber'>54% and 61%</b>.</p>
+
+<h3>Next Major Unlock</h3>
+<table>
+<tr><td>Date</td><td><b>June 28, 2026</b></td></tr>
+<tr><td>Amount</td><td><b class='red'>33.43M GRASS</b></td></tr>
+<tr><td>% Supply</td><td>3.34%</td></tr>
+<tr><td>% Market Cap</td><td>~6.1%</td></tr>
 </table>
 
-<hr>
-
-<h2>11. Competitive Landscape</h2>
-
+<h3>Recipient Breakdown</h3>
 <table>
-<tr>
-<th>Project</th>
-<th>Main Product</th>
-</tr>
-<tr>
-<td>Grass</td>
-<td>AI data collection</td>
-</tr>
-<tr>
-<td>Nodepay</td>
-<td>Bandwidth sharing</td>
-</tr>
-<tr>
-<td>Gradient</td>
-<td>AI infrastructure</td>
-</tr>
-<tr>
-<td>Aethir</td>
-<td>GPU infrastructure</td>
-</tr>
-<tr>
-<td>io.net</td>
-<td>GPU marketplace</td>
-</tr>
+<tr><th>Recipient</th><th>Share</th></tr>
+<tr><td>Investors</td><td>62.8%</td></tr>
+<tr><td>Insiders</td><td>18.3%</td></tr>
+<tr><td>Community</td><td>11.1%</td></tr>
+<tr><td>Foundation</td><td>7.8%</td></tr>
 </table>
 
-<p>
-Grass is unusual because it focuses on data acquisition rather than compute.
-</p>
+<h3>Expected Pressure</h3>
+<table>
+<tr><th>Window</th><th>Assessment</th></tr>
+<tr><td>30 Days</td><td class='amber'>Moderate</td></tr>
+<tr><td>90 Days</td><td class='amber'>Moderate–High</td></tr>
+<tr><td>180 Days</td><td class='red'>High</td></tr>
+<tr><td>365 Days</td><td class='red'>High</td></tr>
+</table>
 
-<hr>
+<div class='take bad'>Approximately 40–45% of supply remains locked. Unlocks are the largest token-specific risk.</div>
+</div>
 
-<h2>12. Bull Case</h2>
+<div class='card'>
+<h2>Holder Analysis</h2>
+<table>
+<tr><th>Metric</th><th>Value</th></tr>
+<tr><td>Total Holders</td><td>~337,679</td></tr>
+<tr><td>Top 10 Holders</td><td class='red'>75.72%</td></tr>
+<tr><td>Top 20 Holders</td><td>84.70%</td></tr>
+<tr><td>Top 50 Holders</td><td>93.71%</td></tr>
+<tr><td>Largest Wallet</td><td>459.1M GRASS (45.9%)</td></tr>
+</table>
+<p>Many large wallets are believed to be treasury, foundation, vesting or ecosystem wallets rather than individual whales.</p>
+<p>Research sources: Arkham, CoinCarp, Dune dashboards, Solscan.</p>
+</div>
 
-<div class="good">
+<div class='card'>
+<h2>Incentives</h2>
 <ul>
-<li>Real revenue exists.</li>
-<li>Revenue appears to be growing rapidly.</li>
-<li>AI data market is expanding.</li>
-<li>Massive user network already built.</li>
-<li>One of the largest Solana airdrops ever.</li>
-<li>Buybacks funded from revenue.</li>
-<li>Strong AI narrative.</li>
+<li>Season 1 Airdrop completed.</li>
+<li>170M GRASS allocated for future incentives.</li>
+<li>30M GRASS allocated to router rewards.</li>
+<li>Community remains focused on Season 2 distribution and wallet rollout.</li>
 </ul>
 </div>
 
-<hr>
+<div class='card'>
+<h2>Upcoming Catalysts</h2>
+<table>
+<tr><th>Date</th><th>Event</th></tr>
+<tr><td>June 28, 2026</td><td>33.43M GRASS Unlock</td></tr>
+<tr><td>July 7, 2026</td><td>Token Holder & Network Participant Call</td></tr>
+<tr><td>H2 2026</td><td>Season 2 Expectations</td></tr>
+<tr><td>2026–2027</td><td>Enterprise AI Expansion</td></tr>
+</table>
+</div>
 
-<h2>13. Bear Case</h2>
-
-<div class="bad">
+<div class='card'>
+<h2>Recent News & FUD (Last ~3 Months)</h2>
+<h3>News</h3>
 <ul>
-<li>Large future token unlocks.</li>
-<li>Revenue heavily dependent on AI demand.</li>
+<li>July 7 token holder call announced.</li>
+<li>Continued focus on enterprise AI products and data infrastructure.</li>
+<li>Ongoing community anticipation around Season 2 incentives.</li>
+</ul>
+<h3>Common FUD</h3>
+<ul>
+<li>Large future unlocks.</li>
+<li>Small buybacks relative to revenue.</li>
+<li>Reward distribution timing.</li>
+<li>Questions about long-term value capture.</li>
+</ul>
+</div>
+
+<div class='card'>
+<h2>Competition</h2>
+<table>
+<tr><th>Project</th><th>Main Focus</th></tr>
+<tr><td>Grass</td><td>AI Data Collection</td></tr>
+<tr><td>Nodepay</td><td>Bandwidth Sharing</td></tr>
+<tr><td>Gradient</td><td>AI Infrastructure</td></tr>
+<tr><td>Aethir</td><td>GPU Infrastructure</td></tr>
+<tr><td>io.net</td><td>GPU Marketplace</td></tr>
+</table>
+</div>
+
+<div class='card'>
+<h2>Bull Case</h2>
+<ul>
+<li>Real revenue.</li>
+<li>Rapid growth.</li>
+<li>AI market expansion.</li>
+<li>Large user base.</li>
+<li>Potential future value capture improvements.</li>
+</ul>
+
+<h2>Bear Case</h2>
+<ul>
+<li>Large unlock schedule.</li>
 <li>No audited financial statements.</li>
 <li>High holder concentration.</li>
-<li>Community frustration around delayed rewards.</li>
-<li>Business customer concentration risk.</li>
-<li>Potential regulatory scrutiny around residential proxy networks.</li>
+<li>Weak direct token value capture.</li>
+<li>Customer concentration risk.</li>
 </ul>
 </div>
 
-<hr>
-
-<h2>14. Valuation View</h2>
-
-<p>
-GRASS is not a traditional equity and holders do not own company cash flows.
-However, revenue is useful as a proxy for network adoption.
-</p>
-
-<p>
-If revenue run-rate remains around $50M+ annually and continues growing, GRASS may deserve premium valuation versus typical DePIN projects.
-</p>
-
-<p>
-If revenue stalls while unlocks continue, token performance may suffer regardless of product success.
-</p>
-
-<hr>
-
-<h2>Final Investment Assessment</h2>
-
+<div class='card'>
+<h2>Final Assessment</h2>
 <table>
-<tr>
-<th>Factor</th>
-<th>Score</th>
-</tr>
-<tr>
-<td>Product</td>
-<td>9/10</td>
-</tr>
-<tr>
-<td>Revenue</td>
-<td>8.5/10</td>
-</tr>
-<tr>
-<td>Tokenomics</td>
-<td>6/10</td>
-</tr>
-<tr>
-<td>Community</td>
-<td>8/10</td>
-</tr>
-<tr>
-<td>Unlock Risk</td>
-<td>4/10</td>
-</tr>
-<tr>
-<td>Overall</td>
-<td>8/10</td>
-</tr>
+<tr><th>Factor</th><th>Score</th></tr>
+<tr><td>Product</td><td>9/10</td></tr>
+<tr><td>Revenue</td><td>8.5/10</td></tr>
+<tr><td>Tokenomics</td><td>6/10</td></tr>
+<tr><td>Community</td><td>8/10</td></tr>
+<tr><td>Unlock Risk</td><td>4/10</td></tr>
+<tr><td><b>Overall</b></td><td><b>8/10</b></td></tr>
 </table>
+<div class='take good'><b>Conclusion:</b> One of the strongest AI/DePIN businesses in crypto, but token performance will depend heavily on unlocks and future value-capture mechanisms.</div>
+</div>
 
-<p>
-Conclusion:
-</p>
-
-<p>
-Among AI/DePIN projects, GRASS currently appears stronger than the average speculative token because there is evidence of real customers and real revenue. The largest risks remain token dilution, customer concentration, and uncertainty around how much of the economic value ultimately accrues to GRASS holders.
-</p>
-
-</body>
-</html>
+</body></html>
